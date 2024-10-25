@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bookbeautyreactapp/static/css/main.70c92d64.css",
-    "main.js": "/bookbeautyreactapp/static/js/main.cbdf3bb9.js",
+    "main.css": "/bookbeautyreactapp/static/css/main.efd45390.css",
+    "main.js": "/bookbeautyreactapp/static/js/main.e2eb827b.js",
     "static/js/453.0c8f9d76.chunk.js": "/bookbeautyreactapp/static/js/453.0c8f9d76.chunk.js",
     "static/media/BannerImg.png": "/bookbeautyreactapp/static/media/BannerImg.62bef9bcfe6526477fc3.png",
     "static/media/Inter-SemiBold.woff2": "/bookbeautyreactapp/static/media/Inter-SemiBold.3be6b9e3b22c24eaada7.woff2",
@@ -40,12 +40,12 @@
     "static/media/ClashGrotesk-Bold.woff2": "/bookbeautyreactapp/static/media/ClashGrotesk-Bold.b8dfad4ca28d511259f7.woff2",
     "static/media/Logo.svg": "/bookbeautyreactapp/static/media/Logo.fbc3fccdfaada6b91cae7f61b7596044.svg",
     "index.html": "/bookbeautyreactapp/index.html",
-    "main.70c92d64.css.map": "/bookbeautyreactapp/static/css/main.70c92d64.css.map",
-    "main.cbdf3bb9.js.map": "/bookbeautyreactapp/static/js/main.cbdf3bb9.js.map",
+    "main.efd45390.css.map": "/bookbeautyreactapp/static/css/main.efd45390.css.map",
+    "main.e2eb827b.js.map": "/bookbeautyreactapp/static/js/main.e2eb827b.js.map",
     "453.0c8f9d76.chunk.js.map": "/bookbeautyreactapp/static/js/453.0c8f9d76.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.70c92d64.css",
-    "static/js/main.cbdf3bb9.js"
+    "static/css/main.efd45390.css",
+    "static/js/main.e2eb827b.js"
   ]
 }
