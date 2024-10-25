@@ -145,11 +145,11 @@ main {
   align-items: center;
 
   @include media-breakpoint-down(lg) {
-    padding: 0 48px 0 48px;
+    padding: 0 40px 0 40px;
   }
 
   @include media-breakpoint-down(md) {
-    padding: 0 24px 0 24px;
+    padding: 0 8px 0 8px;
   }
 }
 
@@ -203,11 +203,13 @@ p {
   justify-content: space-between;
 
   @include media-breakpoint-down(lg) {
-    padding-top: 24px;
     flex-direction: column-reverse;
     height: auto;
     gap: 12px;
     justify-content: center;
+  }
+  @include media-breakpoint-down(sm) {
+    border-radius: 24px;
   }
 
   .img-side {
@@ -230,6 +232,9 @@ p {
         width: 100%; 
         height: auto; 
         border-radius: 0 0 0 48px;
+      }
+      @include media-breakpoint-down(sm) {
+        border-radius: 0 0 0 24px;
       }
     }
   }

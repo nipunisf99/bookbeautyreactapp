@@ -13070,12 +13070,12 @@ main {
 }
 @media (max-width: 991.98px) {
   main {
-    padding: 0 48px 0 48px;
+    padding: 0 40px 0 40px;
   }
 }
 @media (max-width: 767.98px) {
   main {
-    padding: 0 24px 0 24px;
+    padding: 0 8px 0 8px;
   }
 }
 
@@ -13130,11 +13130,15 @@ p {
 }
 @media (max-width: 991.98px) {
   .banner-sec {
-    padding-top: 24px;
     flex-direction: column-reverse;
     height: auto;
     gap: 12px;
     justify-content: center;
+  }
+}
+@media (max-width: 575.98px) {
+  .banner-sec {
+    border-radius: 24px;
   }
 }
 .banner-sec .img-side {
@@ -13159,6 +13163,11 @@ p {
     width: 100%;
     height: auto;
     border-radius: 0 0 0 48px;
+  }
+}
+@media (max-width: 575.98px) {
+  .banner-sec .img-side .img-styles {
+    border-radius: 0 0 0 24px;
   }
 }
 

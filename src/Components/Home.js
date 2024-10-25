@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react';
 function Home() {
   return (
     <main>
-      <section className='banner-sec mt-sm-5 mt-4'>
+      <section className='banner-sec mt-sm-5 mt-2'>
         <div className='img-side'>
           <img className='img-styles' src={bannerimg} alt="booking beauty banner image" />
         </div>
