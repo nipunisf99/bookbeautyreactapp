@@ -7,14 +7,13 @@ import { ReactComponent as Logo } from '../assets/images/Logo.svg';
 
 function Navbar2() {
     const [isOpen, setIsOpen] = useState(false);
-    const navRef = useRef(null);  // Create a ref for the nav container
+    const navRef = useRef(null);
 
     const toggleMenu = () => {
         if (isOpen) {
-            // When closing, animate and then close
-            animateNavbar(isOpen, () => setIsOpen(false));  // Delay setting the state to false until animation completes
-        } else {
-            // When opening, directly open and animate
+            animateNavbar(isOpen, () => setIsOpen(false));
+        }
+        else {
             setIsOpen(true);
             animateNavbar(isOpen);
         }
@@ -29,11 +28,13 @@ function Navbar2() {
                 }
             }
         };
+
         document.addEventListener('mousedown', handleClickOutside);
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [navRef, isOpen]);
+    },
+        [navRef, isOpen]);
 
     return (
         <header>
@@ -65,7 +66,7 @@ function Navbar2() {
                         </ul>
 
                         <div >
-                            <Link to="/"><Logo className='logo'/></Link>
+                            <Link to="/"><Logo className='logo' /></Link>
                         </div>
 
                         <ul className='searchbar-ul'>
@@ -73,7 +74,6 @@ function Navbar2() {
                                 <input type="search" placeholder="Search by name or area.." />
                                 <button class="btn searchbtn" type="submit"><Icon icon="simple-line-icons:magnifier" /></button>
                             </form>
-
                         </ul>
 
                         <Icon icon="iconamoon:menu-burger-horizontal" className="menu-icon" onClick={toggleMenu} />
