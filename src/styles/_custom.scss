@@ -44,19 +44,16 @@ header {
 
   .nav-link {
     display: flex;
-    z-index: 10;
     margin: 0;
 
     @include media-breakpoint-down(md) {
       flex-direction: column;
-      justify-content: space-evenly;
       background-color: $secondary;
       position: absolute;
       width: 320px;
       padding: 24px 24px;
       right: 0;
       top: 10px;
-      z-index: 10;
       display: none;
 
       &.active {
@@ -156,26 +153,6 @@ main {
   }
 }
 
-.margin-top {
-  margin-top: 150px;
-
-  @include media-breakpoint-down(md) {
-    margin-top: 50px;
-  }
-}
-
-.margin-main {
-  margin-top: 80px;
-
-  @include media-breakpoint-down(md) {
-    margin-top: 50px;
-  }
-}
-
-a {
-  text-decoration: none;
-}
-
 h1 {
   font-family: "Poppins Bold";
   font-size: 52px;
@@ -225,38 +202,39 @@ p {
   gap: 80px;
   justify-content: space-between;
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     padding-top: 24px;
     flex-direction: column-reverse;
     height: auto;
-    gap: 24px;
+    gap: 12px;
     justify-content: center;
   }
-}
 
-.banner-sec .img-side {
-  flex: 1; /* Ensure it takes up space proportionally */
-  display: flex; /* Flex is necessary to control the image */
-  align-items: center; /* Center the image vertically if needed */
-  justify-content: center; /* Center the image horizontally if needed */
+  .img-side {
+    flex: 1; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+  
+    @include media-breakpoint-down(md) {
+      height: auto; 
+    }
 
-  @include media-breakpoint-down(md) {
-    height: auto; /* Let the image side adjust its height naturally */
+    .img-styles {
+      border-radius: 48px;
+      height: 100%;
+      width: 100%;
+      object-fit: cover; 
+    
+      @include media-breakpoint-down(md) {
+        width: 100%; 
+        height: auto; 
+        border-radius: 0 0 0 48px;
+      }
+    }
   }
 }
 
-.banner-sec .img-side .img-styles {
-  border-radius: 48px;
-  height: 100%;
-  width: 100%;
-  object-fit: cover; /* Maintain aspect ratio and cover the entire area */
-
-  @include media-breakpoint-down(md) {
-    width: 100%; /* Ensure it resizes to full width */
-    height: auto; /* Height adjusts according to width */
-    border-radius: 0 0 0 48px;
-  }
-}
 
 .banner-sec .text-side {
   display: flex;
@@ -264,11 +242,10 @@ p {
   gap: 24px;
   justify-content: center;
   padding: 0 32px;
-
-  flex: 1; /* Ensure text side takes up space proportionally */
+  flex: 1; 
 
   @include media-breakpoint-down(md) {
-    padding: 16px; /* Adjust padding for smaller screens */
+    padding: 16px; 
   }
 }
 
@@ -285,6 +262,11 @@ input {
 
   &:focus {
     outline: 2px solid $primary;
+  }
+
+  
+  @include media-breakpoint-down(sm) {
+    font-size: 14px;
   }
 }
 
@@ -312,6 +294,8 @@ input {
   @include media-breakpoint-down(sm) {
     display: block;
     width: 100%;
+    padding: 8px 0px;
+    font-size: 14px;
   }
 }
 

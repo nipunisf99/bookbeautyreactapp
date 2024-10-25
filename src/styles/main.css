@@ -919,7 +919,7 @@ progress {
 }
 @media (min-width: 992px) {
   .container-lg, .container-md, .container-sm, .container-xsm, .container {
-    max-width: 992px;
+    max-width: 864px;
   }
 }
 @media (min-width: 1200px) {
@@ -12974,20 +12974,17 @@ header {
 }
 .nav-container .nav-link {
   display: flex;
-  z-index: 10;
   margin: 0;
 }
 @media (max-width: 767.98px) {
   .nav-container .nav-link {
     flex-direction: column;
-    justify-content: space-evenly;
     background-color: #474747;
     position: absolute;
     width: 320px;
     padding: 24px 24px;
     right: 0;
     top: 10px;
-    z-index: 10;
     display: none;
   }
   .nav-container .nav-link.active {
@@ -13082,28 +13079,6 @@ main {
   }
 }
 
-.margin-top {
-  margin-top: 150px;
-}
-@media (max-width: 767.98px) {
-  .margin-top {
-    margin-top: 50px;
-  }
-}
-
-.margin-main {
-  margin-top: 80px;
-}
-@media (max-width: 767.98px) {
-  .margin-main {
-    margin-top: 50px;
-  }
-}
-
-a {
-  text-decoration: none;
-}
-
 h1, .h1 {
   font-family: "Poppins Bold";
   font-size: 52px;
@@ -13153,38 +13128,36 @@ p {
   gap: 80px;
   justify-content: space-between;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .banner-sec {
     padding-top: 24px;
     flex-direction: column-reverse;
     height: auto;
-    gap: 24px;
+    gap: 12px;
     justify-content: center;
   }
 }
-
 .banner-sec .img-side {
-  flex: 1; /* Ensure it takes up space proportionally */
-  display: flex; /* Flex is necessary to control the image */
-  align-items: center; /* Center the image vertically if needed */
-  justify-content: center; /* Center the image horizontally if needed */
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: 767.98px) {
   .banner-sec .img-side {
-    height: auto; /* Let the image side adjust its height naturally */
+    height: auto;
   }
 }
-
 .banner-sec .img-side .img-styles {
   border-radius: 48px;
   height: 100%;
   width: 100%;
-  object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+  object-fit: cover;
 }
 @media (max-width: 767.98px) {
   .banner-sec .img-side .img-styles {
-    width: 100%; /* Ensure it resizes to full width */
-    height: auto; /* Height adjusts according to width */
+    width: 100%;
+    height: auto;
     border-radius: 0 0 0 48px;
   }
 }
@@ -13195,11 +13168,11 @@ p {
   gap: 24px;
   justify-content: center;
   padding: 0 32px;
-  flex: 1; /* Ensure text side takes up space proportionally */
+  flex: 1;
 }
 @media (max-width: 767.98px) {
   .banner-sec .text-side {
-    padding: 16px; /* Adjust padding for smaller screens */
+    padding: 16px;
   }
 }
 
@@ -13216,6 +13189,11 @@ input {
 }
 input:focus {
   outline: 2px solid #FA9191;
+}
+@media (max-width: 575.98px) {
+  input {
+    font-size: 14px;
+  }
 }
 
 .searchbar .btn {
@@ -13242,6 +13220,8 @@ input:focus {
   .btn {
     display: block;
     width: 100%;
+    padding: 8px 0px;
+    font-size: 14px;
   }
 }
 
