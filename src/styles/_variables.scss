@@ -1,0 +1,41 @@
+// Override Bootstrap variables
+$grid-breakpoints: (
+        xs: 0,
+        xsm: 379px,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);
+
+$container-max-widths: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);
+
+$primary: #FA9191;
+$primary-light: #FFE9E9;
+$primary-btn-hover-focus: #E48484;
+$primary-btn-active: #B26767;
+
+$bgcolor: #F8F8F8;
+$secondary: #474747;
+$white: #ffffff;
+$disabled: #A6A8A9;
+$disabled-light: #EEEEEE;
+
+
+
+$font-family-base: "Lato";
+$font-lato: $font-family-base;
+$font-poppins: "Poppins";
+
+$font-size-base: 0.875rem;
+$font-weight-bold: 600;
+
+$ui-font-family: $font-lato;

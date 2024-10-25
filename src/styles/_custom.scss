@@ -1,0 +1,352 @@
+body {
+  background-color: $bgcolor;
+  font-size: 0.875 rem;
+  color: $secondary;
+}
+
+//Navbar
+header {
+  background-color: $secondary;
+}
+
+.nav-container {
+  width: 100%;
+
+  .logo{
+    width: 80px;
+    height: 80px;
+
+    @include media-breakpoint-down(sm) {
+      width: 50px;
+      height: 50px;
+    }
+
+    &:hover {
+      transform: scale(0.95);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .searchbar-ul{
+    width: 300px;
+    form {
+      @include media-breakpoint-down(md) {
+        display: none !important;
+      }
+    }
+  }
+
+  .nav-link {
+    display: flex;
+    z-index: 10;
+    margin: 0;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      justify-content: space-evenly;
+      background-color: $secondary;
+      position: absolute;
+      width: 320px;
+      padding: 24px 24px;
+      right: 0;
+      top: 10px;
+      z-index: 10;
+      display: none;
+
+      &.active {
+        display: flex;
+      }
+    }
+  }
+
+  .nav-link .close-icon {
+    display: none;
+    width: 35px;
+    height: 35px;
+    color: $primary;
+    align-self: end;
+
+    @include media-breakpoint-down(md) {
+      display: block;
+    }
+  }
+
+  .nav-link .two-links {
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    margin-right: 50px;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      width: auto;
+      padding-bottom: 32px;
+    }
+  }
+
+  .nav-link a {
+    font-family: "Lato Regular";
+    font-size: 16px;
+    font-weight: 400;
+    color: $white;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  .nav-link .two-links li {
+    list-style: none;
+    padding: 8px 10px;
+    position: relative;
+
+    @include media-breakpoint-down(md) {
+      padding: 24px 10px;
+    }
+  }
+
+  .nav-link .two-links li:after {
+    content: "";
+    position: absolute;
+    background-color: $primary;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease-in-out;
+  }
+
+  .nav-link .two-links li:hover:after,
+  .nav-link .two-links li:focus:after {
+    width: 100%;
+  }
+
+  .menu-icon {
+    display: none;
+    width: 35px;
+    height: 35px;
+    color: $primary;
+
+    @include media-breakpoint-down(md) {
+      display: block;
+      cursor: pointer;
+    }
+  }
+}
+
+
+//Common
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 80px 0 80px;
+  align-items: center;
+
+  @include media-breakpoint-down(lg) {
+    padding: 0 48px 0 48px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 0 24px 0 24px;
+  }
+}
+
+.margin-top {
+  margin-top: 150px;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 50px;
+  }
+}
+
+.margin-main {
+  margin-top: 80px;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 50px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Poppins Bold";
+  font-size: 52px;
+  color: $secondary;
+
+  @include media-breakpoint-down(md) {
+    font-size: 32px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 28px;
+  }
+
+  span{
+    font-family: 'Poppins Black';
+  }
+}
+
+h2 {
+  font-family: "Poppins Medium";
+  font-size: 24px;
+  color: $secondary;
+
+  @include media-breakpoint-down(md) {
+    font-size: 20px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 18px;
+  }
+}
+
+p {
+  font-family: "Lato Regular";
+  font-size: 16px;
+  color: $secondary;
+}
+
+
+//Banner styling
+
+.banner-sec {
+  display: flex;
+  background-color: $primary-light;
+  border-radius: 48px;
+  height: 520px;
+  gap: 80px;
+  justify-content: space-between;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 24px;
+    flex-direction: column-reverse;
+    height: auto;
+    gap: 24px;
+    justify-content: center;
+  }
+}
+
+.banner-sec .img-side {
+  flex: 1; /* Ensure it takes up space proportionally */
+  display: flex; /* Flex is necessary to control the image */
+  align-items: center; /* Center the image vertically if needed */
+  justify-content: center; /* Center the image horizontally if needed */
+
+  @include media-breakpoint-down(md) {
+    height: auto; /* Let the image side adjust its height naturally */
+  }
+}
+
+.banner-sec .img-side .img-styles {
+  border-radius: 48px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+
+  @include media-breakpoint-down(md) {
+    width: 100%; /* Ensure it resizes to full width */
+    height: auto; /* Height adjusts according to width */
+    border-radius: 0 0 0 48px;
+  }
+}
+
+.banner-sec .text-side {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  padding: 0 32px;
+
+  flex: 1; /* Ensure text side takes up space proportionally */
+
+  @include media-breakpoint-down(md) {
+    padding: 16px; /* Adjust padding for smaller screens */
+  }
+}
+
+input {
+  max-width: 400px;
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: 8px 0 0 8px;
+  background: $white;
+  box-shadow: 2px 2px 5px 0px rgba(71, 33, 33, 0.25);
+  border: none;
+  font-family: 'Lato Regular';
+  font-size: 16px;
+
+  &:focus {
+    outline: 2px solid $primary;
+  }
+}
+
+.searchbar .btn {
+  width: 50px !important;
+  box-shadow: 2px 2px 5px 0px rgba(71, 33, 33, 0.25);
+}
+
+.searchbtn {
+  background-color: $primary;
+  border-radius: 0 8px 8px 0;
+  
+  &:hover {
+    background-color: $primary-btn-hover-focus;
+  }
+}
+
+.btn {
+  padding: 8px 16px;
+  width: 214px;
+  display: inline-block;
+  font-family: 'Lato Regular';
+  font-size: 16px;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.primary-btn{
+  background-color: $primary;
+
+  &:active{
+    background-color: $primary-btn-active !important;
+    color: $white !important;
+    transform: scale(0.98);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $primary-btn-hover-focus;
+    color: $white;
+  }
+}
+
+.secondary-btn{
+  background-color: none;
+  border: 2px solid $secondary;
+  color: $secondary;
+
+  &:active{
+    background-color: $white !important;
+    border: none;
+    transform: scale(0.98);
+    color: $primary !important;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $white;
+    border: 2px solid $secondary;
+    color: $secondary
+  }
+}
